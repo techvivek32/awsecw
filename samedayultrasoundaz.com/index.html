@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Walk in or book a same-day ultrasound at our Phoenix and Glendale offices — board-certified OB-GYN care, completely confidential, se habla espanol. New patient visits are just $100, with AHCCCS, WIC, Medicare and most major insurance accepted.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Same-Day Ultrasound: See Baby Today | Phoenix & Glendale">
+<meta property="og:description" content="Walk in or book a same-day ultrasound at our Phoenix and Glendale offices — board-certified OB-GYN care, completely confidential, se habla espanol. New patient visits are just $100, with AHCCCS, WIC, Medicare and most major insurance accepted.">
+<title>Same-Day Ultrasound: See Baby Today | Phoenix & Glendale</title>
+
+<style>
+  /* ============ TOKENS — committed WHITE theme (wine + sage as accents only) ============ */
+  :root{
+    --ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#F7F4F5;
+    --ink:#2C2026; --ink-soft:#6C5E63; --line:#ECE4E7;
+    --brand:#0E7490; --brand-ink:#FFFFFF; --brand-deep:#0A5468; --brand-soft:#EBF9FB;
+    --accent:#2AA6B8; --accent-2:#7FD4DF; --accent-soft:#EAFBFD; --accent-ink:#33534C;
+    --hero-a:#F2FCFD; --hero-b:#FFFFFF;
+    --shadow:0 1px 2px rgba(44,32,38,.05), 0 14px 32px -18px rgba(92,30,45,.20);
+    --radius:16px; --radius-sm:12px; --maxw:1120px;
+    --font-display:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --font-body:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+
+  /* ============ BASE ============ */
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--font-body);
+       font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  h1,h2,h3{font-family:var(--font-display); font-weight:600; line-height:1.12; text-wrap:balance; margin:0}
+  p{margin:0}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(18px,4vw,40px)}
+  .eyebrow{font-size:.74rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--brand)}
+  .ico{width:1.15em; height:1.15em; flex:none; stroke:currentColor; stroke-width:1.7; fill:none;
+       stroke-linecap:round; stroke-linejoin:round; vertical-align:-.16em}
+
+  /* ============ BUTTONS ============ */
+  .btn{display:inline-flex; align-items:center; gap:.5em; font-family:var(--font-body); font-weight:600;
+       font-size:1rem; padding:.82em 1.5em; border-radius:100px; text-decoration:none; cursor:pointer;
+       border:1.5px solid transparent; transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
+  .btn--primary{background:var(--brand); color:var(--brand-ink); box-shadow:0 10px 24px -12px var(--brand)}
+  .btn--primary:hover{background:var(--brand-deep); transform:translateY(-2px)}
+  .btn--line{background:transparent; color:var(--brand); border-color:var(--brand)}
+  .btn--line:hover{background:var(--brand); color:var(--brand-ink); transform:translateY(-2px)}
+  .btn--sm{padding:.6em 1.1em; font-size:.92rem}
+  .btn:focus-visible, a:focus-visible, summary:focus-visible, button:focus-visible{outline:3px solid var(--accent-2); outline-offset:3px; border-radius:8px}
+
+  /* ============ HEADER ============ */
+  .announce{background:var(--surface-2); color:var(--ink-soft); text-align:center; font-size:.84rem;
+            padding:.5em 1em; border-bottom:1px solid var(--line)}
+  .announce b{color:var(--brand)}
+  header{position:sticky; top:0; z-index:60; background:color-mix(in srgb, var(--ground) 90%, transparent);
+         backdrop-filter:saturate(1.2) blur(10px); border-bottom:1px solid var(--line)}
+  .nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.5rem 0}
+  .brand{display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink)}
+  .brand-mark{width:42px; height:42px; border-radius:12px; background:var(--brand); display:grid; place-items:center; flex:none}
+  .brand-mark svg{width:23px; height:23px; stroke:#fff; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+  .brand-text b{font-family:var(--font-display); font-weight:600; font-size:1.06rem; line-height:1.04; display:block; color:var(--ink)}
+  .brand-text small{font-size:.66rem; color:var(--ink-soft); letter-spacing:.05em; text-transform:uppercase}
+  .nav-links{display:flex; gap:1.5rem; font-size:.96rem; font-weight:500}
+  .nav-links a{text-decoration:none; color:var(--ink-soft); padding:.2rem 0; border-bottom:2px solid transparent}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-links a.active{color:var(--brand); border-bottom-color:var(--brand)}
+  .nav-actions{display:flex; align-items:center; gap:.7rem}
+  .nav-call{display:inline-flex; align-items:center; gap:.4em; text-decoration:none; font-weight:600; color:var(--accent); white-space:nowrap}
+  .hamburger{display:none; width:44px; height:44px; align-items:center; justify-content:center; background:transparent;
+             border:1.5px solid var(--line); border-radius:12px; color:var(--ink); cursor:pointer}
+  .hamburger .ico{width:22px; height:22px}
+  @media (max-width:879px){
+    .hamburger{display:inline-flex}
+    .nav-call{display:none}
+    .nav-links{position:absolute; top:100%; left:0; right:0; flex-direction:column; gap:0;
+               background:var(--surface); border-bottom:1px solid var(--line); box-shadow:var(--shadow);
+               padding:.4rem 0; display:none}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:.95rem clamp(18px,6vw,40px); border-bottom:1px solid var(--line)}
+    .nav-links a.active{border-bottom-color:var(--line); background:var(--surface-2)}
+  }
+
+  /* ============ PAGES / ROUTER ============ */
+  .page[hidden]{display:none}
+  @keyframes fade{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
+  .page{animation:fade .38s ease both}
+  .band{padding:clamp(2.6rem,6vw,4.6rem) 0}
+  .band--sand{background:var(--surface-2)}
+  .sec-head{max-width:640px; margin-bottom:2.2rem}
+  .sec-head.center{margin:0 auto 2.2rem; text-align:center}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem); margin-top:.55rem}
+  .sec-head p{color:var(--ink-soft); margin-top:.7rem; font-size:1.05rem}
+  .page-title{margin-bottom:.4rem}
+
+  /* ============ HERO (home) ============ */
+  .hero{position:relative; background:linear-gradient(158deg,var(--hero-a) 0%, var(--hero-b) 60%); overflow:hidden}
+  .hero .wrap{position:relative; z-index:2; padding:clamp(2.4rem,5.5vw,4rem) 0 clamp(2.4rem,5vw,3.6rem)}
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem); margin-top:.7rem; color:var(--ink)}
+  .hero .lede{font-size:clamp(1.05rem,1.6vw,1.2rem); color:var(--ink-soft); max-width:40ch; margin-top:1rem}
+  .cta-row{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.6rem}
+  .chips{display:flex; flex-wrap:wrap; gap:.55rem .7rem; margin-top:1.7rem; list-style:none; padding:0}
+  .chips li{display:inline-flex; align-items:center; gap:.45em; font-size:.9rem; color:var(--accent-ink);
+            background:var(--accent-soft); border:1px solid color-mix(in srgb,var(--accent) 28%, transparent);
+            padding:.4em .85em; border-radius:100px}
+  .chips .ico{color:var(--accent)}
+  .hero-art{position:absolute; inset:0; z-index:1; pointer-events:none; opacity:.7}
+  .hero-grid{display:grid; gap:1.8rem}
+  .hero-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem 1.5rem; box-shadow:var(--shadow); position:relative; z-index:2}
+  .hero-card .hc-title{font-family:var(--font-display); font-weight:600; font-size:1.28rem; margin-bottom:1.1rem}
+  .hc-list{list-style:none; padding:0; margin:0 0 1.4rem; display:flex; flex-direction:column; gap:.8rem}
+  .hc-list li{display:flex; align-items:center; gap:.7em; font-size:.96rem; color:var(--ink)}
+  .hc-list li .ico{color:var(--accent); width:1.25em; height:1.25em}
+  .hero-card .btn{width:100%; justify-content:center}
+  .hc-call{display:block; text-align:center; margin-top:.85rem; color:var(--brand); font-weight:600; text-decoration:none; font-size:.94rem}
+  .hero-panel{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; width:100%; max-width:430px; margin:0 auto}
+  .hp-top{background:linear-gradient(150deg, var(--brand-soft), var(--accent-soft)); padding:1.9rem 1.6rem; text-align:center}
+  .hp-emblem{width:74px; height:74px; border-radius:50%; background:var(--brand); display:grid; place-items:center; margin:0 auto .9rem; box-shadow:0 10px 22px -8px var(--brand)}
+  .hp-emblem svg{width:34px; height:34px; stroke:#fff; fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
+  .hp-h{font-family:var(--font-display); font-weight:600; font-size:1.3rem; color:var(--ink)}
+  .hp-sub{color:var(--ink-soft); font-size:.9rem; margin-top:.35rem}
+  .hp-list{list-style:none; margin:0; padding:1.4rem 1.6rem 1.7rem; display:flex; flex-direction:column; gap:.9rem}
+  .hp-list li{display:flex; align-items:flex-start; gap:.6em; font-size:.95rem; color:var(--ink)}
+  .hp-list li .ico{color:var(--accent); flex:none; margin-top:.12em}
+  .hero-illus{display:flex; justify-content:center; align-items:center}
+  .hero-illus svg{width:100%; max-width:440px; height:auto}
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.12fr .82fr; align-items:center; gap:3rem}
+    .hero-art{left:auto; right:-4%; width:52%}
+  }
+
+  /* quick links on home */
+  .quick{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:2.4rem}
+  .quick a{display:flex; align-items:center; gap:.8rem; text-decoration:none; color:var(--ink);
+           background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.1rem 1.2rem;
+           box-shadow:var(--shadow); transition:transform .18s ease, border-color .18s ease}
+  .quick a:hover{transform:translateY(-3px); border-color:var(--brand)}
+  .quick .qi{width:40px; height:40px; border-radius:11px; display:grid; place-items:center;
+             background:var(--brand-soft); color:var(--brand); flex:none}
+  .quick b{font-family:var(--font-display); font-weight:600; font-size:1.05rem; display:block}
+  .quick span{color:var(--ink-soft); font-size:.86rem}
+  .quick .arrow{margin-left:auto; color:var(--brand)}
+
+  /* ============ CARDS / SERVICES ============ */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.1rem}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem;
+        box-shadow:var(--shadow); transition:transform .2s ease, box-shadow .2s ease}
+  .card:hover{transform:translateY(-4px); box-shadow:0 22px 44px -22px rgba(92,30,45,.32)}
+  .card .badge{width:48px; height:48px; border-radius:13px; display:grid; place-items:center;
+               background:var(--accent-soft); color:var(--accent); margin-bottom:1rem}
+  .card .badge .ico{width:24px; height:24px}
+  .card h3{font-size:1.2rem}
+  .card p{color:var(--ink-soft); margin-top:.5rem; font-size:.97rem}
+
+  /* steps */
+  .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.1rem; counter-reset:step}
+  .step{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem; position:relative}
+  .step .num{counter-increment:step; font-family:var(--font-display); font-size:1.5rem; color:var(--brand)}
+  .step .num::before{content:"0" counter(step)}
+  .step .badge{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--brand-soft); color:var(--brand); margin:.6rem 0 .8rem}
+  .step h3{font-size:1.12rem}
+  .step p{color:var(--ink-soft); font-size:.95rem; margin-top:.4rem}
+
+  /* ============ PRICING ============ */
+  .price-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.1rem}
+  .free-banner{display:flex; align-items:center; gap:1rem; flex-wrap:wrap; background:var(--brand-soft); border:1px solid color-mix(in srgb,var(--brand) 22%, transparent); border-radius:var(--radius); padding:1.1rem 1.3rem; margin-bottom:1.6rem; max-width:820px}
+  .free-badge{background:var(--brand); color:#fff; font-weight:800; font-size:.82rem; letter-spacing:.08em; padding:.5em .8em; border-radius:10px; flex:none}
+  .free-text{flex:1; min-width:200px}
+  .free-text b{display:block; font-family:var(--font-display); font-weight:600; font-size:1.08rem; color:var(--ink)}
+  .free-text span{font-size:.92rem; color:var(--ink-soft)}
+  .price{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.8rem}
+  .price .tag{display:inline-flex; align-items:center; gap:.4em; font-size:.75rem; font-weight:700; letter-spacing:.08em;
+              text-transform:uppercase; color:var(--accent)}
+  .price .amount{font-family:var(--font-display); font-size:3rem; line-height:1; margin:.5rem 0 .1rem; font-variant-numeric:tabular-nums; color:var(--brand)}
+  .price h3{font-size:1.16rem; margin-top:.2rem}
+  .price p{color:var(--ink-soft); font-size:.95rem; margin-top:.4rem}
+  .note{display:flex; align-items:center; gap:.6em; flex-wrap:wrap; margin-top:1.6rem; color:var(--ink-soft)}
+  .pill{display:inline-flex; align-items:center; gap:.4em; background:var(--accent-soft); color:var(--accent-ink);
+        font-weight:600; padding:.35em .8em; border-radius:100px; font-size:.9rem}
+
+  /* ============ ABOUT ============ */
+  .about{display:grid; gap:2rem; align-items:center}
+  @media(min-width:820px){ .about{grid-template-columns:280px 1fr; gap:3rem} }
+  .portrait{aspect-ratio:1; max-width:280px; border-radius:22px;
+            background:radial-gradient(130% 130% at 30% 20%, var(--accent-2), var(--accent)); display:grid; place-items:center;
+            color:#fff; box-shadow:var(--shadow); position:relative; overflow:hidden}
+  .portrait .mono{font-family:var(--font-display); font-size:4rem; z-index:2}
+  .portrait small{position:absolute; bottom:14px; z-index:2; font-size:.72rem; color:#EAF2EF; letter-spacing:.06em}
+  .about .role{color:var(--accent); font-weight:600; margin-top:.4rem}
+  .about p{color:var(--ink-soft); margin-top:1rem; max-width:60ch}
+  .creds{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.3rem; list-style:none; padding:0}
+  .creds li{display:inline-flex; align-items:center; gap:.45em; font-size:.9rem; font-weight:500; border:1px solid var(--line);
+            background:var(--surface); padding:.4em .85em; border-radius:100px}
+  .creds .ico{color:var(--accent)}
+
+  /* ============ PROVIDERS ============ */
+  .providers{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.1rem}
+  .prov{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.7rem 1.5rem;
+        box-shadow:var(--shadow); text-align:center; display:flex; flex-direction:column; align-items:center;
+        transition:transform .2s ease, box-shadow .2s ease}
+  .prov:hover{transform:translateY(-4px); box-shadow:0 22px 44px -22px rgba(92,30,45,.32)}
+  .avatar{width:86px; height:86px; border-radius:50%; display:grid; place-items:center; color:#fff;
+          font-family:var(--font-display); font-size:1.9rem; letter-spacing:.02em; margin-bottom:1rem; box-shadow:var(--shadow)}
+  .avatar--1{background:radial-gradient(130% 130% at 30% 20%, #0C6580, var(--brand-deep))}
+  .avatar--2{background:radial-gradient(130% 130% at 30% 20%, var(--accent-2), var(--accent))}
+  .avatar--3{background:linear-gradient(135deg, var(--brand), var(--accent))}
+  .prov h3{font-size:1.18rem}
+  .prov .cred{color:var(--accent); font-weight:600; font-size:.9rem; margin-top:.25rem}
+  .ptags{display:flex; flex-wrap:wrap; gap:.4rem; justify-content:center; margin:.9rem 0 1.2rem}
+  .ptag{font-size:.76rem; background:var(--surface-2); border:1px solid var(--line); padding:.3em .7em; border-radius:100px; color:var(--ink-soft)}
+  .ptag.new{background:var(--accent-soft); color:var(--accent-ink); border-color:transparent; font-weight:600}
+  .prov .btn{margin-top:auto}
+
+  /* ============ INSURANCE ============ */
+  .ins-highlights{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.4rem; max-width:820px}
+  .ins-drop{max-width:820px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow)}
+  .ins-drop summary{list-style:none; cursor:pointer; padding:1.05rem 1.4rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-weight:600}
+  .ins-drop summary::-webkit-details-marker{display:none}
+  .ins-drop summary .ico{color:var(--brand); transition:transform .25s ease}
+  .ins-drop[open] summary .ico{transform:rotate(180deg)}
+  .ins-list{list-style:none; margin:0; padding:.2rem 1.4rem 1.2rem; display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:0 1.4rem; max-height:360px; overflow-y:auto}
+  .ins-list li{display:flex; align-items:flex-start; gap:.5em; padding:.4rem 0; font-size:.88rem; color:var(--ink-soft); border-bottom:1px solid var(--line)}
+  .ins-list li .ico{color:var(--accent); margin-top:.15em; width:1em; height:1em}
+
+  /* ============ FAQ ============ */
+  .faq{max-width:760px}
+  .faq details{border-bottom:1px solid var(--line)}
+  .faq summary{list-style:none; cursor:pointer; padding:1.1rem .2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; font-weight:600; font-size:1.06rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .ico{color:var(--brand); transition:transform .25s ease}
+  .faq details[open] summary .ico{transform:rotate(180deg)}
+  .faq .ans{color:var(--ink-soft); padding:0 .2rem 1.2rem; max-width:66ch}
+
+  /* ============ CONTACT ============ */
+  .loc-grid{display:grid; gap:1.2rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .loc-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1.7rem; box-shadow:var(--shadow)}
+  .loc-card h3{font-size:1.2rem; display:flex; align-items:center; gap:.5em}
+  .loc-card h3 .ico{color:var(--brand)}
+  .loc-card address{font-style:normal; color:var(--ink-soft); margin-top:.7rem; line-height:1.6}
+  .loc-card .row{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.1rem}
+  .hours{list-style:none; padding:0; margin:1.1rem 0 0; color:var(--ink-soft); font-size:.95rem}
+  .hours li{display:flex; justify-content:space-between; gap:1rem; padding:.35rem 0; border-bottom:1px dashed var(--line)}
+
+  /* ============ FINAL CTA (light) ============ */
+  .final{background:var(--surface-2); text-align:center; border-top:1px solid var(--line)}
+  .final .wrap{padding:clamp(2.6rem,6vw,4.2rem) 0}
+  .final h2{font-size:clamp(1.7rem,3.6vw,2.6rem); color:var(--ink)}
+  .final p{color:var(--ink-soft); margin:.9rem auto 0; max-width:44ch}
+  .final .cta-row{justify-content:center; margin-top:1.8rem}
+
+  /* ============ FOOTER (light) ============ */
+  footer{background:var(--surface); color:var(--ink-soft); border-top:1px solid var(--line)}
+  footer .wrap{padding:clamp(2.4rem,5vw,3.4rem) 0 1.4rem}
+  .foot-top{display:grid; gap:1.8rem; margin-bottom:2rem}
+  @media(min-width:760px){ .foot-top{grid-template-columns:1.4fr 1fr 1fr} }
+  .foot-brand .brand{margin-bottom:.9rem}
+  .foot-brand .brand-mark{width:46px; height:46px}
+  .foot-brand p{color:var(--ink-soft); font-size:.94rem; max-width:32ch}
+  .foot-col h4{font-family:var(--font-display); font-weight:600; font-size:1.05rem; color:var(--ink); margin:0 0 .7rem}
+  .foot-col a{display:block; color:var(--ink-soft); text-decoration:none; padding:.24rem 0; font-size:.94rem}
+  .foot-col a:hover{color:var(--brand)}
+  .foot-bar{border-top:1px solid var(--line); padding-top:1.3rem; display:flex; flex-wrap:wrap;
+            justify-content:space-between; gap:.7rem; align-items:center; font-size:.85rem; color:var(--ink-soft)}
+  .foot-bar a{color:var(--ink-soft); text-decoration:none} .foot-bar a:hover{color:var(--brand)}
+
+  @media(prefers-reduced-motion:reduce){ *{animation:none !important; transition:none !important} html{scroll-behavior:auto} }
+</style>
+<!-- ANALYTICS: paste your Meta Pixel / Google Ads / GA4 tags here (before </head>) -->
+</head>
+<body>
+
+
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 9.5h18"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1.1 7.8 7.7 7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.7s6.5 6.4 6.5 10.6a6.5 6.5 0 0 1-13 0C5.5 9.1 12 2.7 12 2.7z"/></symbol>
+  <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 8c3-3 6-3 8-.5s5 2.5 8 0M2 14c3-3 6-3 8-.5s5 2.5 8 0"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.7"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0l-7-7A2 2 0 0 1 3 12.2V5a2 2 0 0 1 2-2h7.2a2 2 0 0 1 1.4.6l7 7a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17.8 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
+</svg>
+
+<!-- ANNOUNCE -->
+<div class="announce"><b>FREE pregnancy test &amp; first OB ultrasound</b> · Walk in today · Phoenix &amp; Glendale</div>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#/home" data-nav="home" aria-label="Same Day Ultrasound AZ — Phoenix &amp; Glendale"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M2 8c3-3 6-3 8-.5s5 2.5 8 0M2 14c3-3 6-3 8-.5s5 2.5 8 0"/></svg></span><span class="brand-text"><b>Same Day Ultrasound AZ</b><small>PHOENIX & GLENDALE, AZ</small></span></a>
+    <nav class="nav-links" id="menu" aria-label="Primary">
+      <a href="#/home" data-nav="home">Home</a>
+      <a href="#/services" data-nav="services">Services</a>
+      <a href="#/pricing" data-nav="pricing">Pricing</a>
+      <a href="#/about" data-nav="about">Providers</a>
+      <a href="#/contact" data-nav="contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="nav-call" href="tel:+16238467597"><svg class="ico"><use href="#i-phone"/></svg>(623) 846-7597</a>
+      <a class="btn btn--primary btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener">Book Now</a>
+      <button class="hamburger" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="view" tabindex="-1">
+
+  <!-- ===== HOME (small) ===== -->
+  <section class="page" data-page="home">
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-inner">
+            <p class="eyebrow">SAME-DAY ULTRASOUND · PHOENIX & GLENDALE, AZ</p>
+            <h1>See Your Baby Today with a Same-Day Ultrasound in Phoenix</h1>
+            <p class="lede">Walk in or book a same-day ultrasound at our Phoenix and Glendale offices — board-certified OB-GYN care, completely confidential, se habla espanol. New patient visits are just $100, with AHCCCS, WIC, Medicare and most major insurance accepted.</p>
+            <div class="cta-row">
+              <a class="btn btn--primary" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Book Now</a>
+              <a class="btn btn--line" href="tel:+16238467597"><svg class="ico"><use href="#i-phone"/></svg>Call (623) 846-7597</a>
+            </div>
+            <ul class="chips">
+              <li><svg class="ico"><use href="#i-check"/></svg>Same-day appointments</li>
+              <li><svg class="ico"><use href="#i-check"/></svg>Walk-ins welcome</li>
+              <li><svg class="ico"><use href="#i-check"/></svg>Most insurances accepted</li>
+              <li><svg class="ico"><use href="#i-check"/></svg>AHCCCS &amp; WIC accepted</li>
+              <li><svg class="ico"><use href="#i-check"/></svg>Se habla español</li>
+              <li><svg class="ico"><use href="#i-check"/></svg>100% confidential</li>
+            </ul>
+          </div>
+          <div class="hero-illus"><svg viewBox="0 0 440 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="panel"><rect x="12" y="12" width="416" height="436" rx="46"/></clipPath>
+    <g id="wt">
+      <rect width="20" height="26" rx="2.5" fill="#0E7490"/>
+      <rect x="2" y="2" width="16" height="22" rx="1.5" fill="#0C6580"/>
+      <rect x="2" y="2" width="16" height="7" rx="1.5" fill="#EBF9FB" opacity="0.4"/>
+    </g>
+    <g id="ww">
+      <rect width="18" height="24" rx="2.5" fill="#0E7490"/>
+      <rect x="2" y="2" width="14" height="20" rx="1.5" fill="#0C6580"/>
+      <rect x="2" y="2" width="14" height="6" rx="1.5" fill="#EBF9FB" opacity="0.4"/>
+    </g>
+    <g id="tp">
+      <circle r="16" fill="#2AA6B8"/>
+      <circle cx="-4" cy="-4" r="11" fill="#7FD4DF" opacity="0.8"/>
+      <circle cx="-6" cy="-6" r="4.5" fill="#EAFBFD" opacity="0.55"/>
+    </g>
+  </defs>
+
+  <rect x="18" y="22" width="416" height="436" rx="46" fill="#ECE4E7"/>
+  <rect x="12" y="12" width="416" height="436" rx="46" fill="#EBF9FB"/>
+
+  <g clip-path="url(#panel)">
+    <circle cx="332" cy="118" r="120" fill="#EAFBFD" opacity="0.6"/>
+    <circle cx="118" cy="86" r="40" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="150" cy="94" r="30" fill="#FFFFFF" opacity="0.4"/>
+    <circle cx="86" cy="78" r="22" fill="#FFFFFF" opacity="0.4"/>
+
+    <path d="M12 356 Q220 340 428 356 L428 452 L12 452 Z" fill="#EAFBFD"/>
+    <ellipse cx="248" cy="366" rx="176" ry="24" fill="#7FD4DF" opacity="0.25"/>
+
+    <path d="M172 356 L234 356 L262 452 L144 452 Z" fill="#EBF9FB"/>
+    <line x1="165" y1="382" x2="241" y2="382" stroke="#ECE4E7" stroke-width="2"/>
+    <line x1="157" y1="408" x2="249" y2="408" stroke="#ECE4E7" stroke-width="2"/>
+    <line x1="150" y1="434" x2="256" y2="434" stroke="#ECE4E7" stroke-width="2"/>
+    <line x1="203" y1="356" x2="203" y2="452" stroke="#ECE4E7" stroke-width="2"/>
+
+    <path d="M330 240 L372 220 L372 336 L330 356 Z" fill="#ECE4E7"/>
+    <path d="M256 126 L298 106 L298 220 L256 240 Z" fill="#ECE4E7"/>
+    <path d="M256 126 L298 106 L298 112 L256 132 Z" fill="#0E7490"/>
+    <path d="M330 240 L372 220 L372 226 L330 246 Z" fill="#0E7490"/>
+
+    <path d="M266 137 L281 130 L281 154 L266 161 Z" fill="#0E7490"/>
+    <path d="M266 173 L281 166 L281 190 L266 197 Z" fill="#0E7490"/>
+    <path d="M336 265 L347 260 L347 302 L336 307 Z" fill="#0E7490"/>
+    <path d="M353 257 L364 252 L364 294 L353 299 Z" fill="#0E7490"/>
+
+    <path d="M150 126 L256 126 L298 106 L192 106 Z" fill="#FFFFFF"/>
+    <path d="M72 240 L150 240 L192 220 L114 220 Z" fill="#FFFFFF"/>
+    <path d="M256 240 L330 240 L372 220 L298 220 Z" fill="#FFFFFF"/>
+    <line x1="192" y1="106" x2="298" y2="106" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="114" y1="220" x2="192" y2="220" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="298" y1="220" x2="372" y2="220" stroke="#ECE4E7" stroke-width="1.5"/>
+
+    <path d="M72 356 L72 240 L150 240 L150 126 L256 126 L256 240 L330 240 L330 356 Z" fill="#FFFFFF"/>
+
+    <rect x="150" y="126" width="106" height="7" fill="#0C6580"/>
+    <rect x="72" y="240" width="78" height="7" fill="#0C6580"/>
+    <rect x="256" y="240" width="74" height="7" fill="#0C6580"/>
+
+    <rect x="72" y="348" width="258" height="8" fill="#0E7490"/>
+
+    <rect x="183" y="138" width="38" height="158" rx="5" fill="#EBF9FB"/>
+
+    <line x1="150" y1="221" x2="256" y2="221" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="150" y1="257" x2="256" y2="257" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="72" y1="288" x2="150" y2="288" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="256" y1="288" x2="330" y2="288" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="183" y1="140" x2="183" y2="290" stroke="#ECE4E7" stroke-width="1.5"/>
+    <line x1="221" y1="140" x2="221" y2="290" stroke="#ECE4E7" stroke-width="1.5"/>
+
+    <use href="#wt" x="156" y="190"/>
+    <use href="#wt" x="193" y="190"/>
+    <use href="#wt" x="230" y="190"/>
+    <use href="#wt" x="156" y="226"/>
+    <use href="#wt" x="193" y="226"/>
+    <use href="#wt" x="230" y="226"/>
+    <use href="#wt" x="156" y="262"/>
+    <use href="#wt" x="230" y="262"/>
+    <use href="#ww" x="86" y="258"/>
+    <use href="#ww" x="116" y="258"/>
+    <use href="#ww" x="86" y="294"/>
+    <use href="#ww" x="116" y="294"/>
+    <use href="#ww" x="268" y="258"/>
+    <use href="#ww" x="298" y="258"/>
+    <use href="#ww" x="268" y="294"/>
+    <use href="#ww" x="298" y="294"/>
+
+    <circle cx="203" cy="160" r="22" fill="#EBF9FB" stroke="#0C6580" stroke-width="3.5"/>
+    <rect x="199" y="148" width="8" height="24" rx="2" fill="#0E7490"/>
+    <rect x="191" y="156" width="24" height="8" rx="2" fill="#0E7490"/>
+
+    <rect x="175" y="300" width="56" height="56" rx="3" fill="#0E7490"/>
+    <rect x="181" y="308" width="44" height="48" fill="#7FD4DF"/>
+    <rect x="181" y="308" width="44" height="10" fill="#EAFBFD" opacity="0.5"/>
+    <rect x="201" y="308" width="4" height="48" fill="#FFFFFF"/>
+    <rect x="196" y="330" width="3" height="11" rx="1.5" fill="#0A5468"/>
+    <rect x="207" y="330" width="3" height="11" rx="1.5" fill="#0A5468"/>
+
+    <rect x="156" y="298" width="4" height="58" fill="#0E7490"/>
+    <rect x="220" y="298" width="4" height="58" fill="#0E7490"/>
+    <path d="M170 292 L157 298 L157 307 L170 301 Z" fill="#0A5468"/>
+    <path d="M170 292 L236 292 L223 298 L157 298 Z" fill="#0C6580"/>
+    <path d="M157 298 L223 298 L223 307 L157 307 Z" fill="#0E7490"/>
+
+    <path d="M166 355 L240 355 L248 367 L158 367 Z" fill="#FFFFFF"/>
+
+    <rect x="72" y="345" width="80" height="17" rx="8" fill="#2AA6B8"/>
+    <circle cx="88" cy="346" r="8" fill="#7FD4DF" opacity="0.85"/>
+    <circle cx="106" cy="345" r="8" fill="#7FD4DF" opacity="0.7"/>
+    <circle cx="124" cy="346" r="8" fill="#7FD4DF" opacity="0.85"/>
+    <circle cx="142" cy="345" r="8" fill="#7FD4DF" opacity="0.7"/>
+
+    <rect x="258" y="345" width="72" height="17" rx="8" fill="#2AA6B8"/>
+    <circle cx="272" cy="346" r="8" fill="#7FD4DF" opacity="0.85"/>
+    <circle cx="290" cy="345" r="8" fill="#7FD4DF" opacity="0.7"/>
+    <circle cx="308" cy="346" r="8" fill="#7FD4DF" opacity="0.85"/>
+    <circle cx="324" cy="346" r="7" fill="#7FD4DF" opacity="0.7"/>
+
+    <path d="M154 406 L178 406 L174 424 L158 424 Z" fill="#0E7490"/>
+    <use href="#tp" transform="translate(166,402)"/>
+    <path d="M228 406 L252 406 L248 424 L232 424 Z" fill="#0E7490"/>
+    <use href="#tp" transform="translate(240,402)"/>
+
+    <circle cx="306" cy="406" r="14" fill="#2AA6B8"/>
+    <circle cx="322" cy="410" r="11" fill="#2AA6B8"/>
+    <circle cx="302" cy="402" r="8" fill="#7FD4DF" opacity="0.8"/>
+    <circle cx="320" cy="406" r="6" fill="#7FD4DF" opacity="0.7"/>
+
+    <rect x="104" y="404" width="6" height="34" rx="2" fill="#0E7490"/>
+    <rect x="90" y="382" width="34" height="26" rx="6" fill="#FFFFFF" stroke="#0C6580" stroke-width="2.5"/>
+    <rect x="104" y="388" width="6" height="15" rx="1.5" fill="#0E7490"/>
+    <rect x="99" y="392" width="16" height="6" rx="1.5" fill="#0E7490"/>
+  </g>
+</svg></div>
+        </div>
+        <div class="quick">
+          <a href="#/services" data-nav="services"><span class="qi"><svg class="ico"><use href="#i-heart"/></svg></span><span><b>Our Services</b><span>Testing, ultrasound &amp; prenatal care</span></span><svg class="ico arrow"><use href="#i-arrow"/></svg></a>
+          <a href="#/pricing" data-nav="pricing"><span class="qi"><svg class="ico"><use href="#i-tag"/></svg></span><span><b>Pricing</b><span>$100 first visit · $75 follow-up</span></span><svg class="ico arrow"><use href="#i-arrow"/></svg></a>
+          <a href="#/contact" data-nav="contact"><span class="qi"><svg class="ico"><use href="#i-pin"/></svg></span><span><b>Visit Us</b><span>Phoenix &amp; Glendale offices</span></span><svg class="ico arrow"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head center" style="margin-bottom:1.6rem">
+          <p class="eyebrow">Insurance</p>
+          <h2 class="page-title">Most major insurance plans accepted</h2>
+          <p>Including AHCCCS &amp; Medicare. Don't see yours? Call us — chances are we take it.</p>
+        </div>
+        <div class="ins-highlights" style="justify-content:center; margin-left:auto; margin-right:auto">
+          <span class="pill">AHCCCS</span><span class="pill">Medicare</span><span class="pill">Molina</span><span class="pill">Health Choice</span><span class="pill">Imperial</span><span class="pill">UPMC</span><span class="pill">HealthSmart</span><span class="pill">Multiplan</span><span class="pill">Prime Health</span><span class="pill">Provider Network of America</span>
+        </div>
+        <details class="ins-drop" style="margin-left:auto; margin-right:auto">
+          <summary>See all accepted plans (60+)<svg class="ico"><use href="#i-chev"/></svg></summary>
+          <ul class="ins-list">
+            <li><svg class="ico"><use href="#i-check"/></svg>ACPN - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>AmeriPlan Discount Card</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Antidote PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Fusion PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health Savings Card - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Gold Kidney Health Plan - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Health Choice - AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Health Choice - Generations Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart ACCEL - IME</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart HPO - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Discount Card</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - HealthCosmos Medical Group - EPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Marketplace Plan - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Wellpoint - IME</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Molina - AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Medicare Advantage Plans</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev ValuePoint - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health IME - EPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health Personal Injury Network - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health PPO, Auto, WC</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health Telemedicine Program for Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health WTC - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prospect - SCAN Desert Health Plan</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prospect Letter of Intent</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Primary PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Supplemental - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Select, Inc. - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Three Rivers Provider Network Contigo Health PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>UPMC - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Auto Medical</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Managed Care PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Medicaid/AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Primary Plan PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Supplemental - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Workers Comp</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="page" data-page="services" hidden>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">What we offer</p>
+          <h2 class="page-title">Complete care for you and your pregnancy</h2>
+          <p>From your first pregnancy test to every prenatal visit — expert, judgment-free care under one roof.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-droplet"/></svg></div><h3>Pregnancy Testing</h3><p>Fast, private confirmation with same-day results and clear next steps.</p></article>
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-waves"/></svg></div><h3>Ultrasound</h3><p>Same-day and walk-in ultrasounds to confirm and check on your baby.</p></article>
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-heart"/></svg></div><h3>First-Trimester Care</h3><p>Early prenatal visits to start your pregnancy on a healthy path.</p></article>
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-pulse"/></svg></div><h3>Prenatal Care</h3><p>Ongoing monitoring and support through every trimester.</p></article>
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-users"/></svg></div><h3>Teen Pregnancy Support</h3><p>Kind, confidential guidance and care with zero judgment.</p></article>
+          <article class="card"><div class="badge"><svg class="ico"><use href="#i-tag"/></svg></div><h3>Insurance &amp; AHCCCS</h3><p>We accept most major insurance plans, AHCCCS &amp; WIC — and help you use your benefits.</p></article>
+        </div>
+      </div>
+    </div>
+    <div class="band band--sand">
+      <div class="wrap">
+        <div class="sec-head center"><p class="eyebrow">How it works</p><h2>Being seen is simple</h2></div>
+        <div class="steps">
+          <div class="step"><div class="num"></div><div class="badge"><svg class="ico"><use href="#i-cal"/></svg></div><h3>Book online</h3><p>Pick a time on our secure healow portal in under a minute — or call us.</p></div>
+          <div class="step"><div class="num"></div><div class="badge"><svg class="ico"><use href="#i-pin"/></svg></div><h3>Come in</h3><p>Two convenient locations in Phoenix and Glendale. Walk-ins welcome.</p></div>
+          <div class="step"><div class="num"></div><div class="badge"><svg class="ico"><use href="#i-heart"/></svg></div><h3>Get care</h3><p>Compassionate, expert care with a clear plan and clear pricing.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head"><p class="eyebrow">Good to know</p><h2>Questions we hear a lot</h2></div>
+        <div class="faq">
+          <details open><summary>Do I need an appointment, or can I walk in?<svg class="ico"><use href="#i-chev"/></svg></summary><p class="ans">Both work. Book online in under a minute for a guaranteed time, or simply walk in — we welcome walk-ins at both locations and offer same-day appointments whenever possible.</p></details>
+          <details><summary>What insurance do you accept?<svg class="ico"><use href="#i-chev"/></svg></summary><p class="ans">Most major insurance plans — plus AHCCCS, Medicare, WIC and workers' comp. Don't see your plan? Call (623) 846-7597 — chances are we accept it.</p></details>
+          <details><summary>Can I get a same-day ultrasound?<svg class="ico"><use href="#i-chev"/></svg></summary><p class="ans">Often, yes — same-day and walk-in ultrasounds are available subject to availability. Booking online or calling ahead is the fastest way to be seen the same day.</p></details>
+          <details><summary>Is my visit confidential?<svg class="ico"><use href="#i-chev"/></svg></summary><p class="ans">Completely. Every visit is 100% private and judgment-free — including care for teens.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="page" data-page="pricing" hidden>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Honest, upfront pricing</p>
+          <h2 class="page-title">Simple visit pricing — no surprises</h2>
+          <p>Transparent self-pay rates. On AHCCCS or WIC? We'll help you use your coverage.</p>
+        </div>
+        <div class="free-banner">
+          <span class="free-badge">FREE</span>
+          <div class="free-text"><b>Walk in for a FREE pregnancy test &amp; first OB ultrasound</b><span>No appointment needed — get answers today.</span></div>
+          <a class="btn btn--primary btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener">Book Now</a>
+        </div>
+        <div class="price-grid">
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-star"/></svg>New Patient</span><div class="amount">$100</div><h3>New Patient Visit</h3><p>Comprehensive initial consultation and exam.</p></div>
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-check"/></svg>Returning</span><div class="amount">$75</div><h3>Established Patient Visit</h3><p>Follow-up care and routine monitoring.</p></div>
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-waves"/></svg>Imaging</span><div class="amount">$75</div><h3>Ultrasound</h3><p>OB &amp; GYN ultrasounds.</p></div>
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-shield"/></svg>Birth Control</span><div class="amount">$50</div><h3>Depo Shot</h3><p>Contraceptive injection.</p></div>
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-shield"/></svg>Birth Control</span><div class="amount">$150</div><h3>IUD Insertion</h3><p>Mirena, Paragard, Liletta, Kyleena &amp; more.</p></div>
+          <div class="price"><span class="tag"><svg class="ico"><use href="#i-shield"/></svg>Birth Control</span><div class="amount">$100</div><h3>IUD Removal</h3><p>All IUDs, Nexplanon &amp; more.</p></div>
+        </div>
+        <div class="note">
+          <span class="pill"><svg class="ico"><use href="#i-tag"/></svg>AHCCCS &amp; WIC accepted</span>
+          <span>Not sure what applies to you? <a href="tel:+16238467597" style="color:var(--brand); font-weight:600">Call us</a> and we'll walk you through it.</span>
+        </div>
+        <div class="cta-row" style="margin-top:2rem">
+          <a class="btn btn--primary" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Book Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="band band--sand">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Insurance</p>
+          <h2 class="page-title">Most major insurance plans accepted</h2>
+          <p>We work with a wide range of insurers — including AHCCCS &amp; Medicare plans. Don't see yours? Call us — chances are we take it.</p>
+        </div>
+        <div class="ins-highlights">
+          <span class="pill">AHCCCS</span><span class="pill">Medicare</span><span class="pill">Molina</span><span class="pill">Health Choice</span><span class="pill">Imperial</span><span class="pill">UPMC</span><span class="pill">HealthSmart</span><span class="pill">Multiplan</span><span class="pill">Prime Health</span><span class="pill">Provider Network of America</span>
+        </div>
+        <details class="ins-drop">
+          <summary>See all accepted plans (60+)<svg class="ico"><use href="#i-chev"/></svg></summary>
+          <ul class="ins-list">
+            <li><svg class="ico"><use href="#i-check"/></svg>ACPN - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>AmeriPlan Discount Card</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Antidote PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>CorVel Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Fusion PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health Savings Card - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Galaxy Health Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Gold Kidney Health Plan - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Health Choice - AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Health Choice - Generations Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart ACCEL - IME</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart HPO - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>HealthSmart Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Discount Card</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>IHP - Claritev Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - HealthCosmos Medical Group - EPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Marketplace Plan - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Imperial - Wellpoint - IME</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>MCCP - Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Molina - AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Medicare Advantage Plans</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev ValuePoint - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Multiplan Claritev Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health IME - EPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health Personal Injury Network - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health PPO, Auto, WC</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health Telemedicine Program for Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prime Health WTC - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prospect - SCAN Desert Health Plan</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Prospect Letter of Intent</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Primary PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Supplemental - AP</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Network of America Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Provider Select, Inc. - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Three Rivers Provider Network Contigo Health PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>UPMC - PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Auto Medical</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Managed Care PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>USA Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Velocity Workers Comp</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Auto</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Medicaid/AHCCCS</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Medicare</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Primary Plan PPO</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Supplemental - Discount</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Zelis Healthcare Workers Comp</li>
+          </ul>
+        </details>
+        <div class="note" style="margin-top:1.4rem">
+          <span>Have a plan not listed? <a href="tel:+16238467597" style="color:var(--brand);font-weight:600">Call (623) 846-7597</a> — we'll check it for you.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROVIDERS ===== -->
+  <section class="page" data-page="about" hidden>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head center">
+          <p class="eyebrow">Meet our providers</p>
+          <h2 class="page-title">Care from a team that treats you with dignity</h2>
+          <p>Our OB-GYN providers have cared for women across the Phoenix area — built on fast access, honest pricing, and real respect, whatever your insurance, age, or situation.</p>
+        </div>
+        <div class="providers">
+          <article class="prov">
+            <div class="avatar avatar--1" aria-hidden="true">HS</div>
+            <h3>Dr. Hetal Shah, MD</h3>
+            <p class="cred">Obstetrics &amp; Gynecology</p>
+            <div class="ptags">
+              <span class="ptag new">Accepting new patients</span>
+              <span class="ptag">English</span><span class="ptag">Hindi</span><span class="ptag">Spanish</span>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener">Book with Dr. Shah</a>
+          </article>
+          <article class="prov">
+            <div class="avatar avatar--2" aria-hidden="true">JD</div>
+            <h3>Julie Denton, NP</h3>
+            <p class="cred">Nurse Practitioner · OB-GYN</p>
+            <div class="ptags">
+              <span class="ptag new">Accepting new patients</span>
+              <span class="ptag">English</span><span class="ptag">Spanish</span>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener">Book with Julie</a>
+          </article>
+          <article class="prov">
+            <div class="avatar avatar--3" aria-hidden="true">KT</div>
+            <h3>Kylee Tate, PA</h3>
+            <p class="cred">Physician Assistant · OB-GYN</p>
+            <div class="ptags">
+              <span class="ptag new">Accepting new patients</span>
+              <span class="ptag">English</span><span class="ptag">Spanish</span>
+            </div>
+            <a class="btn btn--line btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener">Book with Kylee</a>
+          </article>
+        </div>
+        <ul class="creds" style="justify-content:center; margin-top:2rem">
+          <li><svg class="ico"><use href="#i-check"/></svg>Board-Certified OB-GYN care</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Same-day &amp; walk-in visits</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>AHCCCS &amp; WIC friendly</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Compassionate &amp; confidential</li>
+        </ul>
+        <div class="cta-row" style="margin-top:1.8rem; justify-content:center">
+          <a class="btn btn--primary" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="page" data-page="contact" hidden>
+    <div class="band">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow">Visit us</p>
+          <h2 class="page-title">Two Phoenix-area offices</h2>
+          <p>Walk in or book ahead — we're easy to reach at either location.</p>
+        </div>
+        <div class="loc-grid">
+          <div class="loc-card">
+            <h3><svg class="ico"><use href="#i-pin"/></svg>Phoenix Office</h3>
+            <address>4700 N 51st Ave, Suite 5<br>Phoenix, AZ 85031</address>
+            <div class="row">
+              <a class="btn btn--line btn--sm" href="tel:+16238467597"><svg class="ico"><use href="#i-phone"/></svg>Call</a>
+              <a class="btn btn--line btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=4700+N+51st+Ave+Suite+5+Phoenix+AZ+85031" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Directions</a>
+            </div>
+          </div>
+          <div class="loc-card">
+            <h3><svg class="ico"><use href="#i-pin"/></svg>Glendale Office</h3>
+            <address>6370 W Union Hills Dr<br>Glendale, AZ 85308</address>
+            <div class="row">
+              <a class="btn btn--line btn--sm" href="tel:+16238467597"><svg class="ico"><use href="#i-phone"/></svg>Call</a>
+              <a class="btn btn--line btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=6370+W+Union+Hills+Dr+Glendale+AZ+85308" target="_blank" rel="noopener"><svg class="ico"><use href="#i-pin"/></svg>Directions</a>
+            </div>
+          </div>
+          <div class="loc-card">
+            <h3><svg class="ico"><use href="#i-clock"/></svg>Office Hours</h3>
+            <ul class="hours" aria-label="Office hours">
+              <li><span>Mon – Fri</span><span>8:00 AM – 5:00 PM</span></li>
+              <li><span>Sat – Sun</span><span>Closed</span></li>
+            </ul>
+            <div class="row"><a class="btn btn--primary btn--sm" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Book Now</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FINAL CTA (shared) -->
+<section class="final">
+  <div class="wrap">
+    <h2>Ready to be seen?</h2>
+    <p>Book your visit in under a minute — same-day appointments available.</p>
+    <div class="cta-row">
+      <a class="btn btn--primary" href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-cal"/></svg>Book Now</a>
+      <a class="btn btn--line" href="tel:+16238467597"><svg class="ico"><use href="#i-phone"/></svg>Call (623) 846-7597</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (shared) -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#/home" data-nav="home" aria-label="Same Day Ultrasound AZ — Phoenix &amp; Glendale"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M2 8c3-3 6-3 8-.5s5 2.5 8 0M2 14c3-3 6-3 8-.5s5 2.5 8 0"/></svg></span><span class="brand-text"><b>Same Day Ultrasound AZ</b><small>PHOENIX & GLENDALE, AZ</small></span></a>
+        <p>Compassionate pregnancy and women's health care in Phoenix &amp; Glendale.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#/services" data-nav="services">Services</a>
+        <a href="#/pricing" data-nav="pricing">Pricing</a>
+        <a href="#/about" data-nav="about">Our Providers</a>
+        <a href="#/contact" data-nav="contact">Contact &amp; Hours</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="tel:+16238467597">(623) 846-7597</a>
+        <a href="#/contact" data-nav="contact">Phoenix · 4700 N 51st Ave, Ste 5</a>
+        <a href="#/contact" data-nav="contact">Glendale · 6370 W Union Hills Dr</a>
+        <a href="https://healow.com/apps/practice/hetal-c-shah-md-6710?v=2&amp;t=1" target="_blank" rel="noopener" style="color:var(--brand);font-weight:600">Book online →</a>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>© 2026 Same Day Ultrasound AZ · Hetal C. Shah, MD</span>
+      <span><a href="#privacy">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var pages=['home','services','pricing','about','contact'];
+    var titles={
+      home:"Same-Day Ultrasound: See Baby Today | Phoenix & Glendale",
+      services:"Services — Same Day Ultrasound AZ",
+      pricing:"Pricing — Same Day Ultrasound AZ",
+      about:"Our Providers — Same Day Ultrasound AZ",
+      contact:"Contact & Locations — Same Day Ultrasound AZ"
+    };
+    var menu=document.getElementById('menu');
+    var menuBtn=document.getElementById('menuBtn');
+    var view=document.getElementById('view');
+    function closeMenu(){ if(menu){menu.classList.remove('open');} if(menuBtn){menuBtn.setAttribute('aria-expanded','false');} }
+    function route(){
+      var h=(location.hash||'#/home').replace('#/','');
+      if(pages.indexOf(h)===-1) h='home';
+      var els=document.querySelectorAll('.page');
+      for(var i=0;i<els.length;i++){ els[i].hidden = (els[i].getAttribute('data-page')!==h); }
+      var navs=document.querySelectorAll('[data-nav]');
+      for(var j=0;j<navs.length;j++){
+        var on=navs[j].getAttribute('data-nav')===h;
+        navs[j].classList.toggle('active',on);
+        if(on) navs[j].setAttribute('aria-current','page'); else navs[j].removeAttribute('aria-current');
+      }
+      if(titles[h]) document.title=titles[h];
+      closeMenu();
+      window.scrollTo(0,0);
+      if(view && view.focus) view.focus({preventScroll:true});
+    }
+    window.addEventListener('hashchange',route);
+    if(menuBtn){ menuBtn.addEventListener('click',function(){
+      var o=menu.classList.toggle('open'); menuBtn.setAttribute('aria-expanded',o?'true':'false');
+    }); }
+    route();
+  })();
+</script>
+
+</body>
+</html>
